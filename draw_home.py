@@ -119,8 +119,8 @@ for j in range(2):      # vẽ chân cây thông (tương tự như vẽ cửa r
     for i in range(3):  # sử dụng vòng lặp để vẽ hình:
         x = 30*(i%2+0.5) # kích thước phụ thuộc vào số vòng lặp và tính chẵn lẻ của i         
         t.fd(x)         
-        t.rt(90)                 # vòng for 1 để tạo nửa khung dạng ] khi j =0 và [ khi j =1
-    j += 1                       # vòng for 2 để tạo 3 cạnh (1/2) hình chữ nhật [, ]
+        t.rt(90)         # vòng for 1 để tạo nửa khung dạng ] khi j =0 và [ khi j =1
+                        # vòng for 2 để tạo 3 cạnh (1/2) hình chữ nhật [, ]
     t.lt(90)
 t.end_fill()
 t.pencolor("")
