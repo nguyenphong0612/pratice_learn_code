@@ -105,9 +105,9 @@ distance = [30,30*(2**(1/2))]
 t.fillcolor("green")
 t.begin_fill()
 for i in range(6):       # vẽ cây thông
-    t.fd(distance[i//3]) # sử dụng 6 vòng lặp cho 2 lần của 3 nhánh cây
+    t.fd((distance[i//3])/((5*(i//3)+(1-2*(i//3))*i)%3+1)) # sử dụng 6 vòng lặp cho 2 lần của 3 nhánh cây
     t.lt(135)            # sử dụng phép chia lấy phần nguyên để truy suất 
-    t.fd(distance[(i//3) - 1])# phần tử trong distance (dis[0],dis[-1],dis[1],dis[0])
+    t.fd((distance[(i//3) - 1])/((5*(i//3)+(1-2*(i//3))*i)%3+1))# phần tử trong distance (dis[0],dis[-1],dis[1],dis[0])
     t.rt(135)            # theo chiều tăng của i
     if i == 2:
         t.rt(135) # khi hết vòng lặp nó vẫn nhớ vị trí này thì phải???
